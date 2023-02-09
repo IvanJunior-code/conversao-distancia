@@ -3,6 +3,9 @@ version: '3.8'
 services:
   app:
     container_name: container-app
-    image: ivanjuniordocker/conversao-distancia:1
+    image: ivanjuniordocker/conversao-distancia:${TAG}
+    build:
+      dockerfile: Dockerfile
+      context: .
     ports:
       - 8080:5000
